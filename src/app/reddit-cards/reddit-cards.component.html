@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="card" *ngFor="let post of posts">
+    <h2 class="title">{{ post.title }}</h2>
+    {{post.selftext_html}}
+    <div class="text" [innerHTML]="post.selftext_html | safeHtml"></div>
+    <a class="link" [href]="post.url" target="_blank">Visit URL</a>
+    <div class="score">Score: {{ post.score }}</div>
+  </div>
+</div>

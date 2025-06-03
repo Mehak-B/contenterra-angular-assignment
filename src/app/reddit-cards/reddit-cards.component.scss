@@ -1,0 +1,47 @@
+/* src/app/reddit-cards/reddit-cards.component.scss */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.card {
+  background: #fff3e0;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .title {
+    font-size: 1.2rem;
+    color: #d84315;
+    margin-bottom: 0.5rem;
+  }
+
+  .text {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .link {
+    color: #1e88e5;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .score {
+    color: #6d4c41;
+    font-weight: 600;
+  }
+}
