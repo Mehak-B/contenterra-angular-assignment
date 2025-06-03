@@ -18,7 +18,6 @@ export class RedditCardsComponent {
 
   ngOnInit(): void {
     this.redditService.getRedditPosts().subscribe(response => {
-      console.log(response)
       this.posts = response.data.children.map((item: any) => item.data);
     });
   }
